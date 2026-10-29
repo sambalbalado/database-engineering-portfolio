@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="16B7217E-D553-C72B-ACC8-920523EEC6E5" name="WASTE_TYPE">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>C5B9AC78-887D-5BEF-CCC5-5D65D9385DAC</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="waste_type_id" id="11D01967-ADE6-56F4-73B5-E587377174CD">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>364605E6-F764-2991-DD85-F22EE548313A</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_type_desc" id="22410CF2-DB11-D6CB-40D4-633AEF5A1E1F">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type description]]></commentInRDBMS>
+<generatorID>CA82BC42-BF6F-3302-0AE2-1A17B774BA87</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="026116EE-3738-179D-4D61-55A38DDA6AD5" name="WASTE_TYPE_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>FDC531CF-C141-E355-9745-6C2A1A7A8BDE</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11D01967-ADE6-56F4-73B5-E587377174CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

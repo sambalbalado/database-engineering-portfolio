@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C566497C-2784-5F5D-F41C-59714438CCEA" name="CONTRACT_BIN_SUPPLY">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>308CB96E-AE0B-E766-801C-2DBBEC1E93E4</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="contract_bin_supply_id" id="1094D60C-5D86-627D-3610-ADBF99772BDA">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract bin supply ID]]></commentInRDBMS>
+<generatorID>C769A7D1-74AB-4A7A-0574-1A9679919DC6</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contract_no" id="E4CDACDA-1FF1-549A-FAE5-9042293C6959">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number ]]></commentInRDBMS>
+<generatorID>939EF3F3-5E88-1A85-DED4-B0E09BD1A61E</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8CB45128-FBF0-A8E9-930D-A83991236F34" referredColumn="88490501-5243-27A1-061C-D7E13D6010D1"/>
+</associations>
+</Column>
+<Column name="waste_type_id" id="B6854105-50A9-CA22-EBA9-3F602C5BCFB0">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>E2828136-A509-E56B-F692-1FD859E55CFC</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87BEEA26-2534-F8FA-34AE-F4EE21B1321D" referredColumn="2A8BF2A7-0513-C358-15A6-D8A9D54A3EAB"/>
+</associations>
+</Column>
+<Column name="bin_size" id="F2181EEB-E373-B195-66EC-00652822414C">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Bin size]]></commentInRDBMS>
+<generatorID>8870C14E-9575-95DF-7C88-BFD6E3D202F4</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87BEEA26-2534-F8FA-34AE-F4EE21B1321D" referredColumn="42C7200A-D7B2-2E6C-11C2-154EBE5D2C35"/>
+</associations>
+</Column>
+<Column name="contract_bin_supply_cost" id="1DE51F05-DC9E-9089-09CB-E605B2C0FB60">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Supply cost of the various bin ]]></commentInRDBMS>
+<generatorID>452EB6AC-8C9E-6DAC-F2B7-421B0000DA2C</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BE144267-5D25-EC6E-6433-98CCB9EB3EE4" name="CONTRACT_BIN_SUPPLY_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>70F28D4C-E08B-C71F-0B8F-7FBE4645A13F</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1094D60C-5D86-627D-3610-ADBF99772BDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9EF1876F-823E-5C38-D3D5-FC2F80B2598E" name="CONTRACT_BIN_SUPPLY_UK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>6E0E3E8B-6B88-1077-2EFE-B0B1F55A633A</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4CDACDA-1FF1-549A-FAE5-9042293C6959"/>
+<colUsage columnID="F2181EEB-E373-B195-66EC-00652822414C"/>
+<colUsage columnID="B6854105-50A9-CA22-EBA9-3F602C5BCFB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80EFC275-AE99-7975-258F-76EC4B4A9EF3" name="bintype_contractbinsupply_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>E889BC0D-1122-0064-3D08-D5096208A8B5</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6854105-50A9-CA22-EBA9-3F602C5BCFB0"/>
+<colUsage columnID="F2181EEB-E373-B195-66EC-00652822414C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41346508-9C96-09EE-1105-1F2A4D877378" name="contract_contractbinsupply_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>244353EB-98B9-0E3F-84E3-765612A2126E</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4CDACDA-1FF1-549A-FAE5-9042293C6959"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="80614E3A-E44E-DD1D-17DA-5BC1E2D75A4E" containerWithKeyObject="47AB328C-E024-C22A-0E88-96D3D9DAD46D" localFKIndex="62986AAB-67E7-189D-2464-D4AECC9522AB" name="localauthority_street_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>516F6219-3A4C-89DC-131E-95ACA9A77BA8</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<referredTableLongName>LOCAL_AUTHORITY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1C7B1F14-D75F-A09E-4686-CBE3DCBEC360</referredTableID>
+<keyObject>D1D85581-914D-4DE5-FA6B-8DA3AC7F13FB</keyObject>
+<referredKeyID>D1D85581-914D-4DE5-FA6B-8DA3AC7F13FB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>authority_name</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

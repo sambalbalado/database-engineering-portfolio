@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="B1AA6898-E585-AE23-8B69-EE3756214ABB" mainViewID="6F874044-169B-982F-AED8-1CE7BB14465D">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:33:48 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+</relationalModel>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="16294675-0F71-4BBB-DDEA-5585AFCFB38B">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:33:47 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

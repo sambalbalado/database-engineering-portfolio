@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9F4C4C3-AD7B-9093-3ACD-764B5E13E5D2" name="BIN">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>30C454A5-CA2C-8146-44F0-AA0046C7C342</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bin_rfid" id="203A9F4D-B8B2-C7C4-1935-375D0F6501D5">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[RFID tag of a bin ]]></commentInRDBMS>
+<generatorID>E21C0A4D-7C4C-18D0-5539-8D9E2B9675BD</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>24 CHAR</dataTypeSize>
+<ownDataTypeParameters>24 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="supply_date" id="84D7E181-541D-1105-D653-5B92E05BC3EE">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of supply]]></commentInRDBMS>
+<generatorID>2C060861-32EE-2DF8-42A3-36A0A73F2A16</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="replacement_reason" id="D0B7804C-5D83-4775-D55E-3FEE0BF7B682">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Reason of replacement
+- Damage by owner
+- Bin Failure
+- Damaged during pickup of waste
+- Stolen]]></commentInRDBMS>
+<generatorID>CE9F686B-2847-AB08-E4A3-E363F83D75A4</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<constraintName>chk_replacementreason</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<listOfValues>
+<valueDef value="Bin Failure" description=""/>
+<valueDef value="Damaged by Owner" description=""/>
+<valueDef value="Damaged during pickup of waste" description=""/>
+<valueDef value="Stolen" description=""/>
+</listOfValues>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_type_id" id="4ADFCA8E-4BCD-B513-9DA1-AAB6E79BC23C">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>58C8E9B8-CFEB-B52E-F6E1-6CF962C8BED8</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="184A332E-280F-7B8D-C5A2-1DBF163B879D" referredColumn="2A8BF2A7-0513-C358-15A6-D8A9D54A3EAB"/>
+</associations>
+</Column>
+<Column name="bin_size" id="C3452363-0AA2-D32D-78E5-A7D4231EE004">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Bin size]]></commentInRDBMS>
+<generatorID>6A83EA4A-5E2E-DD9C-89A1-79ADC2E93F0D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="184A332E-280F-7B8D-C5A2-1DBF163B879D" referredColumn="42C7200A-D7B2-2E6C-11C2-154EBE5D2C35"/>
+</associations>
+</Column>
+<Column name="property_id" id="16C654A2-67AE-6D07-7B73-222777BCA31A">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Property ID]]></commentInRDBMS>
+<generatorID>FE421740-561D-75C1-B02F-1A6FDD1FEB1C</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8A6C0F6-7E71-3EC4-12D4-8DEB1398684B" referredColumn="49B58F14-4455-7C54-8FF0-60C9EE77EC93"/>
+</associations>
+</Column>
+<Column name="contract_bin_supply_id" id="A3BA780B-78A9-0C67-4295-2F1089376C00">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract bin supply ID]]></commentInRDBMS>
+<generatorID>6F08A943-0555-5E73-A37D-9F2585F076E6</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D2AEAA4-BA65-C134-0DE8-17405F093420" referredColumn="1094D60C-5D86-627D-3610-ADBF99772BDA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C6B398C-87C8-CD5F-33B7-76F35FB5BB49" name="BIN_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>A0C74BDF-439E-53E0-0AE4-0EF603A2E2EB</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="203A9F4D-B8B2-C7C4-1935-375D0F6501D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A933CF0-5EC9-88AD-F372-7E5AD6CAC12D" name="bintype_bin_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>9C4B1F5B-9DBE-B3C1-E3B5-F757A282346D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4ADFCA8E-4BCD-B513-9DA1-AAB6E79BC23C"/>
+<colUsage columnID="C3452363-0AA2-D32D-78E5-A7D4231EE004"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4669D4B7-B768-6AA7-0D13-40D9491EF4C3" name="contbinsupply_bin_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>BECA1570-E9C5-0EC6-8C1F-85FBFE5D4938</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3BA780B-78A9-0C67-4295-2F1089376C00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="802B6897-70E9-2475-91F3-7244195B8BF7" name="property_bin_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>12BFCD92-C8EC-325E-2E13-3D9E497F9A62</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16C654A2-67AE-6D07-7B73-222777BCA31A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

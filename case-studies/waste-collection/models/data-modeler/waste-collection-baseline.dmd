@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="waste-collection-baseline" id="78270DF7-A3BD-CF4C-A0BC-17DF66B52599" version="3.5">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:33:47 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>78270DF7-A3BD-CF4C-A0BC-17DF66B52599</designId>
+</OSDM_Design>

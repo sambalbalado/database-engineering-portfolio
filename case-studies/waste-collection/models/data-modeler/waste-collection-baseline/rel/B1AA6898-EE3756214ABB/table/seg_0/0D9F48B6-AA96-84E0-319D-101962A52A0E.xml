@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D9F48B6-AA96-84E0-319D-101962A52A0E" name="BIN_COLLECTION">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>19028249-82D4-378E-CE77-09AAFFD03620</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="collection_run_id" id="86E9200D-01FB-E569-3C45-811FC597A693">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection run entity ID]]></commentInRDBMS>
+<generatorID>737CA078-7758-37AA-2470-85BAAFCB3847</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="74178212-8296-5E8A-6743-989625468B3E" referredColumn="3E7AAF94-F67C-3011-6EF5-55D849F5D71E"/>
+</associations>
+</Column>
+<Column name="bin_rfid" id="1498DDAF-6B3C-B4A7-1346-4E26DB8F09AB">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[RFID tag of a bin ]]></commentInRDBMS>
+<generatorID>FFEFA528-C407-9DA9-9A4B-88C10C2169C4</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>24 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC426B3E-6659-DD2E-1F8F-6FE879E827C8" referredColumn="203A9F4D-B8B2-C7C4-1935-375D0F6501D5"/>
+</associations>
+</Column>
+<Column name="collected_kgs" id="0DDD6013-816A-52CE-AA78-AC8127DB0FD9">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collected in kilograms]]></commentInRDBMS>
+<generatorID>1963ACA9-AE2B-CE4C-F206-9E78BC47D50A</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="overweight" id="EA2823BB-658B-ED3C-FA17-5AD22E4FB1BD">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Overweight of the bin
+(Y) - flagged as overweight
+(N) - flagged as not overweight]]></commentInRDBMS>
+<generatorID>2515EADA-11A7-DC23-6B31-4D70D315F7AF</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<constraintName>chk_overweight</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="Not Overweight"/>
+<valueDef value="Y" description="Overweight"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="649D0E76-F3AC-D250-5051-D6DA692D2AE1" name="BIN_COLLECTION_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>7923BEEB-294A-8484-2CFF-0920DA332865</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86E9200D-01FB-E569-3C45-811FC597A693"/>
+<colUsage columnID="1498DDAF-6B3C-B4A7-1346-4E26DB8F09AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69F4DCEA-5BC2-D37F-8318-14D82FA55014" name="bin_bincollection_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>B126EF89-62CB-DBA2-7C3C-F7FAAF24009F</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1498DDAF-6B3C-B4A7-1346-4E26DB8F09AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57FFA4C4-18FE-26D5-647C-96026EED15FA" name="collectionrun_bincollection_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>CC828AC6-C0B3-72B9-C663-78398A5C16A3</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86E9200D-01FB-E569-3C45-811FC597A693"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

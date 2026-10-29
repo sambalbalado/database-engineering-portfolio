@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3876447D-5F22-372B-2333-55C34D01C57F" name="CONTRACT">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:53:34 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="contract_no" id="4CB0239B-4018-8564-7FE8-F861ABDA93AF">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:53:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number ]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="start_date" id="32F1CA96-87F6-D719-2EA6-253B50947871">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:53:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Start date of the contract]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date" id="9C17E5A8-57D7-6F46-79CB-E5CB0B20B44B">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:54:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[End date of the contract]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="authority_name" id="11E9A2C7-BE96-4F59-0B54-A6C0759437EC">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:21:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Authority name ]]></commentInRDBMS>
+<generatorID>A7DDC2DE-854C-020E-F929-4167A86594C2</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>2C6DAAE7-518F-D370-DE53-16D558087479</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5A708AA0-0095-8EFE-4DAD-996A0E776610" name="CONTRACT PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:53:54 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4CB0239B-4018-8564-7FE8-F861ABDA93AF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

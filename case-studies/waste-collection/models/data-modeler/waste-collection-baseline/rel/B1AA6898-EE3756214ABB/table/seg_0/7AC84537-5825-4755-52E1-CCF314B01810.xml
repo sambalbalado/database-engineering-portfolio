@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7AC84537-5825-4755-52E1-CCF314B01810" name="BIN_TYPE">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>8F3C6B55-A87A-2B2C-49BF-9840174B4270</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="waste_type_id" id="2A8BF2A7-0513-C358-15A6-D8A9D54A3EAB">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>43F111B7-F4D0-9679-7A5D-950BCB9A050B</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="28C08514-40AD-3310-C758-64B900B8DB31" referredColumn="11D01967-ADE6-56F4-73B5-E587377174CD"/>
+</associations>
+</Column>
+<Column name="bin_size" id="42C7200A-D7B2-2E6C-11C2-154EBE5D2C35">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Bin size]]></commentInRDBMS>
+<generatorID>A25609CC-1AF4-E153-D6E8-80F5872D068E</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bin_supply_cost" id="809A0F27-0499-B90C-1AC2-7FAA3924E0A1">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Standard bin supply cost]]></commentInRDBMS>
+<generatorID>55E19FA6-A249-092C-A0A6-4AC9E5EFEDBF</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8E316B5A-7616-AA9B-8308-1BA2E1926D53" name="BIN_TYPE_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>63E70B2B-0F22-82A3-8C2D-9D9016B1F170</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A8BF2A7-0513-C358-15A6-D8A9D54A3EAB"/>
+<colUsage columnID="42C7200A-D7B2-2E6C-11C2-154EBE5D2C35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="319F438A-C7B8-CC25-1AA2-982FDAC4DE2B" name="wastetype_bintype_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>72F667F1-4078-9037-C4E2-74185FB51633</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A8BF2A7-0513-C358-15A6-D8A9D54A3EAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

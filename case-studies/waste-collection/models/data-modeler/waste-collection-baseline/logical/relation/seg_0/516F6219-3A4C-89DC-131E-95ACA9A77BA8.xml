@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="localauthority_street_fk" directorySegmentName="seg_0" id="516F6219-3A4C-89DC-131E-95ACA9A77BA8">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:23:02 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<sourcePk>B5854DA4-B4BF-DAFE-97AB-557BB4573985</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>administers</nameOnSource>
+<nameOnTarget>  </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>35420C03-718F-A9BA-2F11-569CDB74E95B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>490D1227-2483-1247-D2C1-FCEE94880479</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

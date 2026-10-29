@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="street_property_fk" directorySegmentName="seg_0" id="985BD16D-1002-CDF7-76B0-91A372B0F36D">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:38:51 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<sourcePk>A04F3B8D-3591-68C2-469A-F4D334A64A9C</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>contains</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>490D1227-2483-1247-D2C1-FCEE94880479</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BE4B3AEC-37B4-04EF-C7EA-B2093EB47D14</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

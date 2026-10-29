@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="74178212-8296-5E8A-6743-989625468B3E" containerWithKeyObject="0D9F48B6-AA96-84E0-319D-101962A52A0E" localFKIndex="57FFA4C4-18FE-26D5-647C-96026EED15FA" name="collectionrun_bincollection_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>CC828AC6-C0B3-72B9-C663-78398A5C16A3</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<referredTableLongName>COLLECTION_RUN</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8F7C0D03-BFE3-EBAC-07F8-CF824C12CBEF</referredTableID>
+<keyObject>324AD00F-230C-5BAA-DC0C-6585BF980BF7</keyObject>
+<referredKeyID>324AD00F-230C-5BAA-DC0C-6585BF980BF7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>collection_run_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

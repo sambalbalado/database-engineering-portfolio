@@ -1,0 +1,1073 @@
+HISTORICAL INPUT: supplied execution transcript, not executed during portfolio preparation.
+Applies to the design baseline, before the portfolio integrity overlay.
+
+SQL>
+SQL>
+SQL> DROP TABLE BIN CASCADE CONSTRAINTS
+  2  ;
+
+Table BIN dropped.
+
+SQL>
+SQL> DROP TABLE BIN_COLLECTION CASCADE CONSTRAINTS
+  2  ;
+
+Table BIN_COLLECTION dropped.
+
+SQL>
+SQL> DROP TABLE BIN_TYPE CASCADE CONSTRAINTS
+  2  ;
+
+Table BIN_TYPE dropped.
+
+SQL>
+SQL> DROP TABLE COLLECTION_RUN CASCADE CONSTRAINTS
+  2  ;
+
+Table COLLECTION_RUN dropped.
+
+SQL>
+SQL> DROP TABLE CONTRACT CASCADE CONSTRAINTS
+  2  ;
+
+Table CONTRACT dropped.
+
+SQL>
+SQL> DROP TABLE CONTRACT_BIN_SUPPLY CASCADE CONSTRAINTS
+  2  ;
+
+Table CONTRACT_BIN_SUPPLY dropped.
+
+SQL>
+SQL> DROP TABLE CONTRACT_WASTE_COLLECTION CASCADE CONSTRAINTS
+  2  ;
+
+Table CONTRACT_WASTE_COLLECTION dropped.
+
+SQL>
+SQL> DROP TABLE LOCAL_AUTHORITY CASCADE CONSTRAINTS
+  2  ;
+
+Table LOCAL_AUTHORITY dropped.
+
+SQL>
+SQL> DROP TABLE OWNER CASCADE CONSTRAINTS
+  2  ;
+
+Table OWNER dropped.
+
+SQL>
+SQL> DROP TABLE PROPERTY CASCADE CONSTRAINTS
+  2  ;
+
+Table PROPERTY dropped.
+
+SQL>
+SQL> DROP TABLE PROPERTY_OWNER CASCADE CONSTRAINTS
+  2  ;
+
+Table PROPERTY_OWNER dropped.
+
+SQL>
+SQL> DROP TABLE STREET CASCADE CONSTRAINTS
+  2  ;
+
+Table STREET dropped.
+
+SQL>
+SQL> DROP TABLE TRUCK CASCADE CONSTRAINTS
+  2  ;
+
+Table TRUCK dropped.
+
+SQL>
+SQL> DROP TABLE WASTE_TYPE CASCADE CONSTRAINTS
+  2  ;
+
+Table WASTE_TYPE dropped.
+
+SQL>
+SQL> -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+SQL>
+SQL> -- predefined type, no DDL - XMLTYPE
+SQL>
+SQL> CREATE TABLE BIN
+  2      (
+  3       bin_rfid               CHAR (24 CHAR)  NOT NULL ,
+  4       supply_date            DATE  NOT NULL ,
+  5       replacement_reason     VARCHAR2 (40) ,
+  6       waste_type_id          CHAR (2 CHAR)  NOT NULL ,
+  7       bin_size               NUMBER (3)  NOT NULL ,
+  8       property_id            NUMBER (7)  NOT NULL ,
+  9       contract_bin_supply_id NUMBER (7)  NOT NULL
+ 10      )
+ 11  ;
+
+Table BIN created.
+
+SQL>
+SQL> ALTER TABLE BIN
+  2      ADD CONSTRAINT chk_replacementreason
+  3      CHECK (replacement_reason IN ('Bin Failure', 'Damaged by Owner', 'Damaged during pickup of waste', 'Stolen'))
+  4  ;
+
+Table BIN altered.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.bin_rfid IS 'RFID tag of a bin '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.supply_date IS 'Date of supply'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.replacement_reason IS 'Reason of replacement
+  2  - Damage by owner
+  3  - Bin Failure
+  4  - Damaged during pickup of waste
+  5  - Stolen'
+  6  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.waste_type_id IS 'Waste type ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.bin_size IS 'Bin size'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.property_id IS 'Property ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN.contract_bin_supply_id IS 'Contract bin supply ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE BIN
+  2      ADD CONSTRAINT BIN_PK PRIMARY KEY ( bin_rfid ) ;
+
+Table BIN altered.
+
+SQL>
+SQL> CREATE TABLE BIN_COLLECTION
+  2      (
+  3       collection_run_id NUMBER (7)  NOT NULL ,
+  4       bin_rfid          CHAR (24 CHAR)  NOT NULL ,
+  5       collected_kgs     NUMBER (5,2) ,
+  6       overweight        CHAR (1)  NOT NULL
+  7      )
+  8  ;
+
+Table BIN_COLLECTION created.
+
+SQL>
+SQL> ALTER TABLE BIN_COLLECTION
+  2      ADD CONSTRAINT chk_overweight
+  3      CHECK (overweight IN ('N', 'Y'))
+  4  ;
+
+Table BIN_COLLECTION altered.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_COLLECTION.collection_run_id IS 'Collection run entity ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_COLLECTION.bin_rfid IS 'RFID tag of a bin '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_COLLECTION.collected_kgs IS 'Collected in kilograms'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_COLLECTION.overweight IS 'Overweight of the bin
+  2  (Y) - flagged as overweight
+  3  (N) - flagged as not overweight'
+  4  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE BIN_COLLECTION
+  2      ADD CONSTRAINT BIN_COLLECTION_PK PRIMARY KEY ( collection_run_id, bin_rfid ) ;
+
+Table BIN_COLLECTION altered.
+
+SQL>
+SQL> CREATE TABLE BIN_TYPE
+  2      (
+  3       waste_type_id   CHAR (2 CHAR)  NOT NULL ,
+  4       bin_size        NUMBER (3)  NOT NULL ,
+  5       bin_supply_cost NUMBER (7,2)  NOT NULL
+  6      )
+  7  ;
+
+Table BIN_TYPE created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_TYPE.waste_type_id IS 'Waste type ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_TYPE.bin_size IS 'Bin size'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN BIN_TYPE.bin_supply_cost IS 'Standard bin supply cost'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE BIN_TYPE
+  2      ADD CONSTRAINT BIN_TYPE_PK PRIMARY KEY ( waste_type_id, bin_size ) ;
+
+Table BIN_TYPE altered.
+
+SQL>
+SQL> CREATE TABLE COLLECTION_RUN
+  2      (
+  3       collection_run_id    NUMBER (7)  NOT NULL ,
+  4       date_of_collection   DATE  NOT NULL ,
+  5       waste_type_id        CHAR (2 CHAR)  NOT NULL ,
+  6       contract_no          NUMBER (8)  NOT NULL ,
+  7       collection_truck_vin VARCHAR2 (20)  NOT NULL
+  8      )
+  9  ;
+
+Table COLLECTION_RUN created.
+
+SQL>
+SQL> COMMENT ON COLUMN COLLECTION_RUN.collection_run_id IS 'Collection run entity ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN COLLECTION_RUN.date_of_collection IS 'Date of collection'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN COLLECTION_RUN.waste_type_id IS 'Waste type ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN COLLECTION_RUN.contract_no IS 'Contract number '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN COLLECTION_RUN.collection_truck_vin IS 'Collection trucks Vehicle Identification Number'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE COLLECTION_RUN
+  2      ADD CONSTRAINT COLLECTION_RUN_PK PRIMARY KEY ( collection_run_id ) ;
+
+Table COLLECTION_RUN altered.
+
+SQL>
+SQL> ALTER TABLE COLLECTION_RUN
+  2      ADD CONSTRAINT COLLECTION_RUN_UK UNIQUE ( contract_no , waste_type_id , date_of_collection ) ;
+
+Table COLLECTION_RUN altered.
+
+SQL>
+SQL> CREATE TABLE CONTRACT
+  2      (
+  3       contract_no    NUMBER (8)  NOT NULL ,
+  4       start_date     DATE  NOT NULL ,
+  5       end_date       DATE  NOT NULL ,
+  6       authority_name VARCHAR2 (50)  NOT NULL
+  7      )
+  8  ;
+
+Table CONTRACT created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT.contract_no IS 'Contract number '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT.start_date IS 'Start date of the contract'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT.end_date IS 'End date of the contract'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT.authority_name IS 'Authority name '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE CONTRACT
+  2      ADD CONSTRAINT CONTRACT_PK PRIMARY KEY ( contract_no ) ;
+
+Table CONTRACT altered.
+
+SQL>
+SQL> CREATE TABLE CONTRACT_BIN_SUPPLY
+  2      (
+  3       contract_bin_supply_id   NUMBER (7)  NOT NULL ,
+  4       contract_no              NUMBER (8)  NOT NULL ,
+  5       waste_type_id            CHAR (2 CHAR)  NOT NULL ,
+  6       bin_size                 NUMBER (3)  NOT NULL ,
+  7       contract_bin_supply_cost NUMBER (7,2)  NOT NULL
+  8      )
+  9  ;
+
+Table CONTRACT_BIN_SUPPLY created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_BIN_SUPPLY.contract_bin_supply_id IS 'Contract bin supply ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_BIN_SUPPLY.contract_no IS 'Contract number '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_BIN_SUPPLY.waste_type_id IS 'Waste type ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_BIN_SUPPLY.bin_size IS 'Bin size'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_BIN_SUPPLY.contract_bin_supply_cost IS 'Supply cost of the various bin '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_BIN_SUPPLY
+  2      ADD CONSTRAINT CONTRACT_BIN_SUPPLY_PK PRIMARY KEY ( contract_bin_supply_id ) ;
+
+Table CONTRACT_BIN_SUPPLY altered.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_BIN_SUPPLY
+  2      ADD CONSTRAINT CONTRACT_BIN_SUPPLY_UK UNIQUE ( contract_no , bin_size , waste_type_id ) ;
+
+Table CONTRACT_BIN_SUPPLY altered.
+
+SQL>
+SQL> CREATE TABLE CONTRACT_WASTE_COLLECTION
+  2      (
+  3       contract_no            NUMBER (8)  NOT NULL ,
+  4       waste_type_id          CHAR (2 CHAR)  NOT NULL ,
+  5       collection_cost_per_kg NUMBER (7,2)  NOT NULL ,
+  6       collection_frequency   VARCHAR2 (50)  NOT NULL
+  7      )
+  8  ;
+
+Table CONTRACT_WASTE_COLLECTION created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_WASTE_COLLECTION.contract_no IS 'Contract number '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_WASTE_COLLECTION.waste_type_id IS 'Waste type ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_WASTE_COLLECTION.collection_cost_per_kg IS 'Collection cost per kilogram for the waste types to be collected under this contract'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN CONTRACT_WASTE_COLLECTION.collection_frequency IS 'Collection frequency '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_WASTE_COLLECTION
+  2      ADD CONSTRAINT CONTRACT_WASTE_COLLECTION_PK PRIMARY KEY ( waste_type_id, contract_no ) ;
+
+Table CONTRACT_WASTE_COLLECTION altered.
+
+SQL>
+SQL> CREATE TABLE LOCAL_AUTHORITY
+  2      (
+  3       authority_name   VARCHAR2 (50)  NOT NULL ,
+  4       ceo_given_name   VARCHAR2 (20)  NOT NULL ,
+  5       ceo_family_name  VARCHAR2 (20)  NOT NULL ,
+  6       contact_no       VARCHAR2 (15)  NOT NULL ,
+  7       total_area_sq_km NUMBER (8,2)  NOT NULL ,
+  8       authority_type   CHAR (1)  NOT NULL
+  9      )
+ 10  ;
+
+Table LOCAL_AUTHORITY created.
+
+SQL>
+SQL> ALTER TABLE LOCAL_AUTHORITY
+  2      ADD CONSTRAINT chk_authoritytype
+  3      CHECK (authority_type IN ('B', 'C', 'D', 'S', 'T'))
+  4  ;
+
+Table LOCAL_AUTHORITY altered.
+
+SQL>
+SQL> COMMENT ON COLUMN LOCAL_AUTHORITY.authority_name IS 'Authority name '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN LOCAL_AUTHORITY.ceo_given_name IS 'CEO given name'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN LOCAL_AUTHORITY.ceo_family_name IS 'CEO Family name'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN LOCAL_AUTHORITY.contact_no IS 'contact telephone number'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN LOCAL_AUTHORITY.total_area_sq_km IS 'Total area in square kilometres'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN LOCAL_AUTHORITY.authority_type IS 'Local Authorities are classified into the following fixed types:
+  2  - B as Borough
+  3  - C as City
+  4  - D as District Council
+  5  - S as Shire
+  6  - T as Town'
+  7  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE LOCAL_AUTHORITY
+  2      ADD CONSTRAINT LOCAL_AUTHORITY_PK PRIMARY KEY ( authority_name ) ;
+
+Table LOCAL_AUTHORITY altered.
+
+SQL>
+SQL> CREATE TABLE OWNER
+  2      (
+  3       owner_id       NUMBER (7)  NOT NULL ,
+  4       owner_name     VARCHAR2 (50)  NOT NULL ,
+  5       owner_email    VARCHAR2 (50)  NOT NULL ,
+  6       owner_phone_no VARCHAR2 (15)  NOT NULL
+  7      )
+  8  ;
+
+Table OWNER created.
+
+SQL>
+SQL> COMMENT ON COLUMN OWNER.owner_id IS 'Owner''s ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN OWNER.owner_name IS 'Owner name'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN OWNER.owner_email IS 'Owner email'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN OWNER.owner_phone_no IS 'Owner telephone number'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE OWNER
+  2      ADD CONSTRAINT OWNER_PK PRIMARY KEY ( owner_id ) ;
+
+Table OWNER altered.
+
+SQL>
+SQL> CREATE TABLE PROPERTY
+  2      (
+  3       property_id    NUMBER (7)  NOT NULL ,
+  4       street_id      NUMBER (4)  NOT NULL ,
+  5       authority_name VARCHAR2 (50)  NOT NULL ,
+  6       street_no      NUMBER (5)  NOT NULL
+  7      )
+  8  ;
+
+Table PROPERTY created.
+
+SQL>
+SQL> COMMENT ON COLUMN PROPERTY.property_id IS 'Property ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN PROPERTY.street_id IS 'Street ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN PROPERTY.authority_name IS 'Authority name '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN PROPERTY.street_no IS 'Street number'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE PROPERTY
+  2      ADD CONSTRAINT PROPERTY_PK PRIMARY KEY ( property_id ) ;
+
+Table PROPERTY altered.
+
+SQL>
+SQL> ALTER TABLE PROPERTY
+  2      ADD CONSTRAINT PROPERTY_UK UNIQUE ( street_no , authority_name , street_id ) ;
+
+Table PROPERTY altered.
+
+SQL>
+SQL> CREATE TABLE PROPERTY_OWNER
+  2      (
+  3       owner_id    NUMBER (7)  NOT NULL ,
+  4       property_id NUMBER (7)  NOT NULL
+  5      )
+  6  ;
+
+Table PROPERTY_OWNER created.
+
+SQL>
+SQL> COMMENT ON COLUMN PROPERTY_OWNER.owner_id IS 'Owner''s ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN PROPERTY_OWNER.property_id IS 'Property ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE PROPERTY_OWNER
+  2      ADD CONSTRAINT PROPERTY_OWNER_PK PRIMARY KEY ( property_id, owner_id ) ;
+
+Table PROPERTY_OWNER altered.
+
+SQL>
+SQL> CREATE TABLE STREET
+  2      (
+  3       street_id         NUMBER (4)  NOT NULL ,
+  4       authority_name    VARCHAR2 (50)  NOT NULL ,
+  5       street_name       VARCHAR2 (50)  NOT NULL ,
+  6       length_metres     NUMBER (5,2)  NOT NULL ,
+  7       road_surface_type CHAR (1)  NOT NULL ,
+  8       lanes_no          NUMBER (3)  NOT NULL
+  9      )
+ 10  ;
+
+Table STREET created.
+
+SQL>
+SQL> ALTER TABLE STREET
+  2      ADD CONSTRAINT chk_roadsurfacetype
+  3      CHECK (road_surface_type IN ('A', 'C', 'U'))
+  4  ;
+
+Table STREET altered.
+
+SQL>
+SQL> COMMENT ON COLUMN STREET.street_id IS 'Street ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN STREET.authority_name IS 'Authority name '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN STREET.street_name IS 'Street name '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN STREET.length_metres IS 'Street length in metres'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN STREET.road_surface_type IS 'Type of road surface
+  2  - A as Asphalt
+  3  - C as Concrete
+  4  - U as Unsealed'
+  5  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN STREET.lanes_no IS 'number of lanes'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE STREET
+  2      ADD CONSTRAINT STREET_PK PRIMARY KEY ( street_id, authority_name ) ;
+
+Table STREET altered.
+
+SQL>
+SQL> CREATE TABLE TRUCK
+  2      (
+  3       collection_truck_vin VARCHAR2 (20)  NOT NULL ,
+  4       truck_rego           VARCHAR2 (10)  NOT NULL ,
+  5       truck_make           VARCHAR2 (10)  NOT NULL ,
+  6       truck_year           NUMBER (4)  NOT NULL ,
+  7       truck_model          VARCHAR2 (30)  NOT NULL
+  8      )
+  9  ;
+
+Table TRUCK created.
+
+SQL>
+SQL> COMMENT ON COLUMN TRUCK.collection_truck_vin IS 'Collection trucks Vehicle Identification Number'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN TRUCK.truck_rego IS 'Truck Rego'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN TRUCK.truck_make IS 'Truck make '
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN TRUCK.truck_year IS 'Truck Year'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN TRUCK.truck_model IS 'Model of truck'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE TRUCK
+  2      ADD CONSTRAINT TRUCK_PK PRIMARY KEY ( collection_truck_vin ) ;
+
+Table TRUCK altered.
+
+SQL>
+SQL> CREATE TABLE WASTE_TYPE
+  2      (
+  3       waste_type_id   CHAR (2 CHAR)  NOT NULL ,
+  4       waste_type_desc VARCHAR2 (20)  NOT NULL
+  5      )
+  6  ;
+
+Table WASTE_TYPE created.
+
+SQL>
+SQL> COMMENT ON COLUMN WASTE_TYPE.waste_type_id IS 'Waste type ID'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> COMMENT ON COLUMN WASTE_TYPE.waste_type_desc IS 'Waste type description'
+  2  ;
+
+Comment created.
+
+SQL>
+SQL> ALTER TABLE WASTE_TYPE
+  2      ADD CONSTRAINT WASTE_TYPE_PK PRIMARY KEY ( waste_type_id ) ;
+
+Table WASTE_TYPE altered.
+
+SQL>
+SQL> ALTER TABLE BIN_COLLECTION
+  2      ADD CONSTRAINT bin_bincollection_fk FOREIGN KEY
+  3      (
+  4       bin_rfid
+  5      )
+  6      REFERENCES BIN
+  7      (
+  8       bin_rfid
+  9      )
+ 10  ;
+
+Table BIN_COLLECTION altered.
+
+SQL>
+SQL> ALTER TABLE BIN
+  2      ADD CONSTRAINT bintype_bin_fk FOREIGN KEY
+  3      (
+  4       waste_type_id,
+  5       bin_size
+  6      )
+  7      REFERENCES BIN_TYPE
+  8      (
+  9       waste_type_id,
+ 10       bin_size
+ 11      )
+ 12  ;
+
+Table BIN altered.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_BIN_SUPPLY
+  2      ADD CONSTRAINT bintype_contractbinsupply_fk FOREIGN KEY
+  3      (
+  4       waste_type_id,
+  5       bin_size
+  6      )
+  7      REFERENCES BIN_TYPE
+  8      (
+  9       waste_type_id,
+ 10       bin_size
+ 11      )
+ 12  ;
+
+Table CONTRACT_BIN_SUPPLY altered.
+
+SQL>
+SQL> ALTER TABLE BIN_COLLECTION
+  2      ADD CONSTRAINT collectionrun_bincollection_fk FOREIGN KEY
+  3      (
+  4       collection_run_id
+  5      )
+  6      REFERENCES COLLECTION_RUN
+  7      (
+  8       collection_run_id
+  9      )
+ 10  ;
+
+Table BIN_COLLECTION altered.
+
+SQL>
+SQL> ALTER TABLE COLLECTION_RUN
+  2      ADD CONSTRAINT collectionrun_truck_fk FOREIGN KEY
+  3      (
+  4       collection_truck_vin
+  5      )
+  6      REFERENCES TRUCK
+  7      (
+  8       collection_truck_vin
+  9      )
+ 10  ;
+
+Table COLLECTION_RUN altered.
+
+SQL>
+SQL> ALTER TABLE BIN
+  2      ADD CONSTRAINT contbinsupply_bin_fk FOREIGN KEY
+  3      (
+  4       contract_bin_supply_id
+  5      )
+  6      REFERENCES CONTRACT_BIN_SUPPLY
+  7      (
+  8       contract_bin_supply_id
+  9      )
+ 10  ;
+
+Table BIN altered.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_BIN_SUPPLY
+  2      ADD CONSTRAINT contract_contractbinsupply_fk FOREIGN KEY
+  3      (
+  4       contract_no
+  5      )
+  6      REFERENCES CONTRACT
+  7      (
+  8       contract_no
+  9      )
+ 10  ;
+
+Table CONTRACT_BIN_SUPPLY altered.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_WASTE_COLLECTION
+  2      ADD CONSTRAINT contract_cwc_fk FOREIGN KEY
+  3      (
+  4       contract_no
+  5      )
+  6      REFERENCES CONTRACT
+  7      (
+  8       contract_no
+  9      )
+ 10  ;
+
+Table CONTRACT_WASTE_COLLECTION altered.
+
+SQL>
+SQL> ALTER TABLE COLLECTION_RUN
+  2      ADD CONSTRAINT cwc_cr_fk FOREIGN KEY
+  3      (
+  4       waste_type_id,
+  5       contract_no
+  6      )
+  7      REFERENCES CONTRACT_WASTE_COLLECTION
+  8      (
+  9       waste_type_id,
+ 10       contract_no
+ 11      )
+ 12  ;
+
+Table COLLECTION_RUN altered.
+
+SQL>
+SQL> ALTER TABLE CONTRACT
+  2      ADD CONSTRAINT localauthority_contract_fk FOREIGN KEY
+  3      (
+  4       authority_name
+  5      )
+  6      REFERENCES LOCAL_AUTHORITY
+  7      (
+  8       authority_name
+  9      )
+ 10  ;
+
+Table CONTRACT altered.
+
+SQL>
+SQL> ALTER TABLE STREET
+  2      ADD CONSTRAINT localauthority_street_fk FOREIGN KEY
+  3      (
+  4       authority_name
+  5      )
+  6      REFERENCES LOCAL_AUTHORITY
+  7      (
+  8       authority_name
+  9      )
+ 10  ;
+
+Table STREET altered.
+
+SQL>
+SQL> ALTER TABLE PROPERTY_OWNER
+  2      ADD CONSTRAINT owner_propertyowner_fk FOREIGN KEY
+  3      (
+  4       owner_id
+  5      )
+  6      REFERENCES OWNER
+  7      (
+  8       owner_id
+  9      )
+ 10  ;
+
+Table PROPERTY_OWNER altered.
+
+SQL>
+SQL> ALTER TABLE BIN
+  2      ADD CONSTRAINT property_bin_fk FOREIGN KEY
+  3      (
+  4       property_id
+  5      )
+  6      REFERENCES PROPERTY
+  7      (
+  8       property_id
+  9      )
+ 10  ;
+
+Table BIN altered.
+
+SQL>
+SQL> ALTER TABLE PROPERTY_OWNER
+  2      ADD CONSTRAINT property_propertyowner_fk FOREIGN KEY
+  3      (
+  4       property_id
+  5      )
+  6      REFERENCES PROPERTY
+  7      (
+  8       property_id
+  9      )
+ 10  ;
+
+Table PROPERTY_OWNER altered.
+
+SQL>
+SQL> ALTER TABLE PROPERTY
+  2      ADD CONSTRAINT street_property_fk FOREIGN KEY
+  3      (
+  4       street_id,
+  5       authority_name
+  6      )
+  7      REFERENCES STREET
+  8      (
+  9       street_id,
+ 10       authority_name
+ 11      )
+ 12  ;
+
+Table PROPERTY altered.
+
+SQL>
+SQL> ALTER TABLE BIN_TYPE
+  2      ADD CONSTRAINT wastetype_bintype_fk FOREIGN KEY
+  3      (
+  4       waste_type_id
+  5      )
+  6      REFERENCES WASTE_TYPE
+  7      (
+  8       waste_type_id
+  9      )
+ 10  ;
+
+Table BIN_TYPE altered.
+
+SQL>
+SQL> ALTER TABLE CONTRACT_WASTE_COLLECTION
+  2      ADD CONSTRAINT wastetype_cwc_fk FOREIGN KEY
+  3      (
+  4       waste_type_id
+  5      )
+  6      REFERENCES WASTE_TYPE
+  7      (
+  8       waste_type_id
+  9      )
+ 10  ;
+
+Table CONTRACT_WASTE_COLLECTION altered.
+
+SQL>
+SQL>
+SQL>
+SQL> -- Oracle SQL Developer Data Modeler Summary Report:
+SQL> --
+SQL> -- CREATE TABLE                            14
+SQL> -- CREATE INDEX                             0
+SQL> -- ALTER TABLE                             38
+SQL> -- CREATE VIEW                              0
+SQL> -- ALTER VIEW                               0
+SQL> -- CREATE PACKAGE                           0
+SQL> -- CREATE PACKAGE BODY                      0
+SQL> -- CREATE PROCEDURE                         0
+SQL> -- CREATE FUNCTION                          0
+SQL> -- CREATE TRIGGER                           0
+SQL> -- ALTER TRIGGER                            0
+SQL> -- CREATE COLLECTION TYPE                   0
+SQL> -- CREATE STRUCTURED TYPE                   0
+SQL> -- CREATE STRUCTURED TYPE BODY              0
+SQL> -- CREATE CLUSTER                           0
+SQL> -- CREATE CONTEXT                           0
+SQL> -- CREATE DATABASE                          0
+SQL> -- CREATE DIMENSION                         0
+SQL> -- CREATE DIRECTORY                         0
+SQL> -- CREATE DISK GROUP                        0
+SQL> -- CREATE ROLE                              0
+SQL> -- CREATE ROLLBACK SEGMENT                  0
+SQL> -- CREATE SEQUENCE                          0
+SQL> -- CREATE MATERIALIZED VIEW                 0
+SQL> -- CREATE MATERIALIZED VIEW LOG             0
+SQL> -- CREATE SYNONYM                           0
+SQL> -- CREATE TABLESPACE                        0
+SQL> -- CREATE USER                              0
+SQL> --
+SQL> -- DROP TABLESPACE                          0
+SQL> -- DROP DATABASE                            0
+SQL> --
+SQL> -- REDACTION POLICY                         0
+SQL> -- TSDP POLICY                              0
+SQL> --
+SQL> -- ORDS DROP SCHEMA                         0
+SQL> -- ORDS ENABLE SCHEMA                       0
+SQL> -- ORDS ENABLE OBJECT                       0
+SQL> --
+SQL> -- ERRORS                                   0
+SQL> -- WARNINGS                                 0
+SQL>
+SQL> SPOOL off

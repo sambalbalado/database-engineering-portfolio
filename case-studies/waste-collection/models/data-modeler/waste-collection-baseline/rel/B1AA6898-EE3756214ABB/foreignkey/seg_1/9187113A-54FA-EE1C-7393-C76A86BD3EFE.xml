@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="9187113A-54FA-EE1C-7393-C76A86BD3EFE" containerWithKeyObject="8F7C0D03-BFE3-EBAC-07F8-CF824C12CBEF" localFKIndex="CD1416CD-A6A0-3822-20AB-2928D344039A" name="collectionrun_truck_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>4DEDB71D-5C97-3ABB-FD2E-1B4EF96E7003</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<referredTableLongName>TRUCK</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C0AB21AC-5ABE-24F4-88B1-C7D596F05824</referredTableID>
+<keyObject>88AEBD7F-7E29-89C3-5F0D-FEFA25CF26F5</keyObject>
+<referredKeyID>88AEBD7F-7E29-89C3-5F0D-FEFA25CF26F5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>collection_truck_vin</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

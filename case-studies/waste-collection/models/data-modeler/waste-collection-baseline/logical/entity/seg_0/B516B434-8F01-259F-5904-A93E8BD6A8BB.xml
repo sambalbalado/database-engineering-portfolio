@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B516B434-8F01-259F-5904-A93E8BD6A8BB" name="COLLECTION_RUN">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-27 06:59:39 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="collection_run_id" id="E6469FDA-EBBD-9034-926E-1768812ECFF5">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 07:05:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection run entity ID]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_of_collection" id="E37D3511-7ABB-9DCC-F11D-EF98D6886D8C">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:52:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of collection]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste_type_id" id="13CCAC53-1B13-28BF-0F37-55AB692C6125">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:50:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>C7780786-D675-91D7-329C-325C4990AD83</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>51EFCE55-B8B4-38E1-BFE5-BCF3E31AE01D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contract_no" id="E37BC4B9-4EC8-4348-9831-06B45D9BBFEB">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:50:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number ]]></commentInRDBMS>
+<generatorID>C7780786-D675-91D7-329C-325C4990AD83</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>D012187C-2DBA-EC54-7F6E-7D94FA15D4BC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="collection_truck_vin" id="F27FD4CB-254C-ECA5-7C5E-8A72FFE67D5B">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:50:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection trucks Vehicle Identification Number]]></commentInRDBMS>
+<generatorID>4DEDB71D-5C97-3ABB-FD2E-1B4EF96E7003</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>9BD1D647-3573-9E2D-904E-1E8215855F49</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="66C544B5-6C2C-101B-A663-49456C8DA6D4" name="COLLECTION_RUN PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:51:51 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E6469FDA-EBBD-9034-926E-1768812ECFF5</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="346CDDE0-80C0-545D-E653-EFD25BB9E05E" name="COLLECTION_RUN_UK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 10:34:56 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<newElementsIDs>E37BC4B9-4EC8-4348-9831-06B45D9BBFEB,13CCAC53-1B13-28BF-0F37-55AB692C6125,E37D3511-7ABB-9DCC-F11D-EF98D6886D8C</newElementsIDs>
+<usedAttributes>
+<attributeRef>E37BC4B9-4EC8-4348-9831-06B45D9BBFEB</attributeRef>
+<attributeRef>13CCAC53-1B13-28BF-0F37-55AB692C6125</attributeRef>
+<attributeRef>E37D3511-7ABB-9DCC-F11D-EF98D6886D8C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

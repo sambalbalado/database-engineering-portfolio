@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F96C04D0-5337-CACD-FCEE-A32444E49D21" name="PROPERTY_OWNER">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>5388AD56-9A10-CD87-4DD4-E4C0D821B568</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="owner_id" id="5A5CAC4B-B1A9-E9BF-0892-C0F07B8DA5CD">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Owner's ID]]></commentInRDBMS>
+<generatorID>8A6010AA-18C9-1CA9-A16A-A177FA9BD47B</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8234F65-EF93-A0CF-D5B0-D0B1BBF0D810" referredColumn="98BF4488-8204-FE6F-5D83-86CB5978F63F"/>
+</associations>
+</Column>
+<Column name="property_id" id="6508F6F0-96D5-D0A5-2EB8-2E13546199F1">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Property ID]]></commentInRDBMS>
+<generatorID>76CC8AB5-6480-8F52-41B2-7430197CF856</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="887A6D79-2B86-43B9-3364-4035BE5DF4B8" referredColumn="49B58F14-4455-7C54-8FF0-60C9EE77EC93"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A252ED5-DAD4-427B-FFB5-1000DD44E21B" name="PROPERTY_OWNER_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>C322AFCB-9219-311D-F7F1-BFB20C39E548</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6508F6F0-96D5-D0A5-2EB8-2E13546199F1"/>
+<colUsage columnID="5A5CAC4B-B1A9-E9BF-0892-C0F07B8DA5CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6E2A0AB-B1CE-5171-5C18-EC10A50EEDD1" name="owner_propertyowner_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>13739D23-080C-C6A9-9251-A3640CAF401D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A5CAC4B-B1A9-E9BF-0892-C0F07B8DA5CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4ACBB87B-7DBD-6439-BE15-4621B46B48F3" name="property_propertyowner_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>D931A4F3-E746-0557-2963-E6797C231737</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6508F6F0-96D5-D0A5-2EB8-2E13546199F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

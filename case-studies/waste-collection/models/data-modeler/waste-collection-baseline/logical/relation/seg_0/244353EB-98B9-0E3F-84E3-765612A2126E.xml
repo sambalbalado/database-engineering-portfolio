@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="contract_contractbinsupply_fk" directorySegmentName="seg_0" id="244353EB-98B9-0E3F-84E3-765612A2126E">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:25:02 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<sourcePk>5A708AA0-0095-8EFE-4DAD-996A0E776610</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Offers bin</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3876447D-5F22-372B-2333-55C34D01C57F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>308CB96E-AE0B-E766-801C-2DBBEC1E93E4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

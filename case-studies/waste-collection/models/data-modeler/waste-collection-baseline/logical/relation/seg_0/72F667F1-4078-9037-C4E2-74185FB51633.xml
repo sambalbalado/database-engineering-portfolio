@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="wastetype_bintype_fk" directorySegmentName="seg_0" id="72F667F1-4078-9037-C4E2-74185FB51633">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:27:04 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<sourcePk>FDC531CF-C141-E355-9745-6C2A1A7A8BDE</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>Classifies</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C5B9AC78-887D-5BEF-CCC5-5D65D9385DAC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8F3C6B55-A87A-2B2C-49BF-9840174B4270</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

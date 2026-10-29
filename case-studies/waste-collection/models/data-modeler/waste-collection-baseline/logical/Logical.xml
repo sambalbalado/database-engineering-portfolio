@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="A5F7C724-945A-4AAF-E637-B78BEE40E01A" mainViewID="F795ECF9-F8F4-8D8E-8950-172C2ECC061A">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:33:47 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

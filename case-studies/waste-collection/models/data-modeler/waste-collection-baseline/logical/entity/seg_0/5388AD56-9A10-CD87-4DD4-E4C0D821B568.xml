@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5388AD56-9A10-CD87-4DD4-E4C0D821B568" name="PROPERTY_OWNER">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:38:24 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="owner_id" id="8A6010AA-18C9-1CA9-A16A-A177FA9BD47B">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:45:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Owner's ID]]></commentInRDBMS>
+<generatorID>13739D23-080C-C6A9-9251-A3640CAF401D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>FBDC5470-7745-E19D-8267-143756DFFAD7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="property_id" id="76CC8AB5-6480-8F52-41B2-7430197CF856">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 08:30:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Property ID]]></commentInRDBMS>
+<generatorID>D931A4F3-E746-0557-2963-E6797C231737</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>03BAB3AE-4886-66DD-86BB-E30D4A7472ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C322AFCB-9219-311D-F7F1-BFB20C39E548" name="PROPERTY_OWNER PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:43:16 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>76CC8AB5-6480-8F52-41B2-7430197CF856</attributeRef>
+<attributeRef>8A6010AA-18C9-1CA9-A16A-A177FA9BD47B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

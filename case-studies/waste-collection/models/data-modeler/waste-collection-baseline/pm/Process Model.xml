@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="BE4885DC-09A0-1C9B-00F5-4440D426B450">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:33:47 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

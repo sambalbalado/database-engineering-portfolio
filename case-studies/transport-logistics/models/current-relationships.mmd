@@ -1,0 +1,13 @@
+erDiagram
+ CUSTOMER ||--o{ QUOTE : requests
+ EMPLOYEE o|--o{ EMPLOYEE : manages
+ EMPLOYEE ||--o{ QUOTE : prepares
+ QUOTE ||--o| JOB : becomes
+ EMPLOYEE ||--o{ JOB : schedules_and_drives
+ TRUCK ||--o{ COMBINATION : approved_in
+ TRAILER ||--o{ COMBINATION : approved_in
+ COMBINATION ||--o{ JOB : allocated_to
+ TRUCK ||--o{ SERVICE : undergoes
+ SERVICE ||--o{ SERVICE_LOG : records
+ SERVICE_TASK ||--o{ SERVICE_LOG : defines
+ EMPLOYEE ||--o{ SERVICE_LOG : performs

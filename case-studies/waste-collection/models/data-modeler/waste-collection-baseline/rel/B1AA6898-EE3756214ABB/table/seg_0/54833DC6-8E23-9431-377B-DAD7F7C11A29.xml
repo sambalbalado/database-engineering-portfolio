@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="54833DC6-8E23-9431-377B-DAD7F7C11A29" name="PROPERTY">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>BE4B3AEC-37B4-04EF-C7EA-B2093EB47D14</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="property_id" id="49B58F14-4455-7C54-8FF0-60C9EE77EC93">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Property ID]]></commentInRDBMS>
+<generatorID>03BAB3AE-4886-66DD-86BB-E30D4A7472ED</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_id" id="F5980B87-1885-CB53-19A5-856824F90BEE">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street ID]]></commentInRDBMS>
+<generatorID>CA73477A-4367-D219-E9B8-69CF50E40E66</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="65154698-F691-F3F7-ADA9-2BDA6898B832" referredColumn="6C1190E7-B837-3D00-8031-062D29558983"/>
+</associations>
+</Column>
+<Column name="authority_name" id="861BC193-2ED6-ADFE-2E82-7900EF061B5E">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Authority name ]]></commentInRDBMS>
+<generatorID>C673C2B6-41F3-D7AB-DDEE-6902F7C84246</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="65154698-F691-F3F7-ADA9-2BDA6898B832" referredColumn="F764B91C-0329-069B-6579-09CAE7CDAC07"/>
+</associations>
+</Column>
+<Column name="street_no" id="24C314D3-F60F-9917-A0BF-AA3F004B72F7">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street number]]></commentInRDBMS>
+<generatorID>485FE110-8F41-6917-FFC7-76C3DB8A7ECA</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20E93E31-5D19-0905-1AC3-59065A173640" name="PROPERTY_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>E7F52298-B666-459B-F6AB-751608E0391E</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49B58F14-4455-7C54-8FF0-60C9EE77EC93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="362841CF-D510-68D9-729E-842BBB90373A" name="PROPERTY_UK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>60DD909C-3B01-07F1-747C-BB1A590A76A4</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24C314D3-F60F-9917-A0BF-AA3F004B72F7"/>
+<colUsage columnID="861BC193-2ED6-ADFE-2E82-7900EF061B5E"/>
+<colUsage columnID="F5980B87-1885-CB53-19A5-856824F90BEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="81753E2B-4A1E-FAE5-1B7A-B034E025B4FB" name="street_property_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>985BD16D-1002-CDF7-76B0-91A372B0F36D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5980B87-1885-CB53-19A5-856824F90BEE"/>
+<colUsage columnID="861BC193-2ED6-ADFE-2E82-7900EF061B5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,422 @@
+[
+  {
+    "_id": 1,
+    "customer_name": "Demo One",
+    "customer_business": "Demo Business 1",
+    "customer_address": "1 Example Avenue, Melbourne, 3000",
+    "customer_phone": "0000000101",
+    "customer_stats": {
+      "number_of_quotes": 8,
+      "number_of_jobs": 6,
+      "total_paid_jobcost": "$5,650.00",
+      "total_unpaid_jobcost": "$2,500.00"
+    },
+    "quotes": [
+      {
+        "quote_no": 1,
+        "quote_prepared_on": "01-May-2026",
+        "preferred_start_date": "05-May-2026",
+        "start_location": "Melbourne",
+        "end_location": "Sydney",
+        "quote_cost": "$1,200.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$1,200.00"
+      },
+      {
+        "quote_no": 2,
+        "quote_prepared_on": "02-May-2026",
+        "preferred_start_date": "07-May-2026",
+        "start_location": "Sydney",
+        "end_location": "Brisbane",
+        "quote_cost": "$1,500.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$1,500.00"
+      },
+      {
+        "quote_no": 3,
+        "quote_prepared_on": "04-May-2026",
+        "preferred_start_date": "10-May-2026",
+        "start_location": "Brisbane",
+        "end_location": "Melbourne",
+        "quote_cost": "$1,800.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$1,800.00"
+      },
+      {
+        "quote_no": 10,
+        "quote_prepared_on": "18-May-2026",
+        "preferred_start_date": "22-May-2026",
+        "start_location": "Newcastle",
+        "end_location": "Sydney",
+        "quote_cost": "$600.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$700.00"
+      },
+      {
+        "quote_no": 15,
+        "quote_prepared_on": "28-May-2026",
+        "preferred_start_date": "03-Jun-2026",
+        "start_location": "Darwin",
+        "end_location": "Alice Springs",
+        "quote_cost": "$2,200.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$2,200.00"
+      },
+      {
+        "quote_no": 20,
+        "quote_prepared_on": "05-Jun-2026",
+        "preferred_start_date": "12-Jun-2026",
+        "start_location": "Melbourne",
+        "end_location": "Albury",
+        "quote_cost": "$750.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$750.00"
+      },
+      {
+        "quote_no": 25,
+        "quote_prepared_on": "15-Jun-2026",
+        "preferred_start_date": "21-Jun-2026",
+        "start_location": "Mackay",
+        "end_location": "Rockhampton",
+        "quote_cost": "$950.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 30,
+        "quote_prepared_on": "28-Jun-2026",
+        "preferred_start_date": "04-Jul-2026",
+        "start_location": "Orange",
+        "end_location": "Sydney",
+        "quote_cost": "$700.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      }
+    ]
+  },
+  {
+    "_id": 2,
+    "customer_name": "Demo Two",
+    "customer_business": "Demo Business 2",
+    "customer_address": "2 Example Avenue, Sydney, 2000",
+    "customer_phone": "0000000102",
+    "customer_stats": {
+      "number_of_quotes": 7,
+      "number_of_jobs": 4,
+      "total_paid_jobcost": "$4,700.00",
+      "total_unpaid_jobcost": "-"
+    },
+    "quotes": [
+      {
+        "quote_no": 4,
+        "quote_prepared_on": "05-May-2026",
+        "preferred_start_date": "12-May-2026",
+        "start_location": "Adelaide",
+        "end_location": "Melbourne",
+        "quote_cost": "$950.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$950.00"
+      },
+      {
+        "quote_no": 5,
+        "quote_prepared_on": "06-May-2026",
+        "preferred_start_date": "14-May-2026",
+        "start_location": "Melbourne",
+        "end_location": "Adelaide",
+        "quote_cost": "$950.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$950.00"
+      },
+      {
+        "quote_no": 11,
+        "quote_prepared_on": "20-May-2026",
+        "preferred_start_date": "25-May-2026",
+        "start_location": "Sydney",
+        "end_location": "Newcastle",
+        "quote_cost": "$600.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$600.00"
+      },
+      {
+        "quote_no": 16,
+        "quote_prepared_on": "30-May-2026",
+        "preferred_start_date": "05-Jun-2026",
+        "start_location": "Alice Springs",
+        "end_location": "Darwin",
+        "quote_cost": "$2,200.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$2,200.00"
+      },
+      {
+        "quote_no": 21,
+        "quote_prepared_on": "06-Jun-2026",
+        "preferred_start_date": "14-Jun-2026",
+        "start_location": "Albury",
+        "end_location": "Sydney",
+        "quote_cost": "$750.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 26,
+        "quote_prepared_on": "18-Jun-2026",
+        "preferred_start_date": "24-Jun-2026",
+        "start_location": "Rockhampton",
+        "end_location": "Brisbane",
+        "quote_cost": "$1,100.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 31,
+        "quote_prepared_on": "01-Jul-2026",
+        "preferred_start_date": "10-Jul-2026",
+        "start_location": "Dubbo",
+        "end_location": "Sydney",
+        "quote_cost": "$850.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      }
+    ]
+  },
+  {
+    "_id": 3,
+    "customer_name": "Demo Three",
+    "customer_business": "Demo Business 3",
+    "customer_address": "3 Example Avenue, Perth, 6000",
+    "customer_phone": "0000000103",
+    "customer_stats": {
+      "number_of_quotes": 7,
+      "number_of_jobs": 4,
+      "total_paid_jobcost": "$5,050.00",
+      "total_unpaid_jobcost": "$3,900.00"
+    },
+    "quotes": [
+      {
+        "quote_no": 6,
+        "quote_prepared_on": "08-May-2026",
+        "preferred_start_date": "15-May-2026",
+        "start_location": "Perth",
+        "end_location": "Sydney",
+        "quote_cost": "$3,500.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$3,800.00"
+      },
+      {
+        "quote_no": 7,
+        "quote_prepared_on": "10-May-2026",
+        "preferred_start_date": "16-May-2026",
+        "start_location": "Sydney",
+        "end_location": "Perth",
+        "quote_cost": "$3,600.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$3,900.00"
+      },
+      {
+        "quote_no": 12,
+        "quote_prepared_on": "22-May-2026",
+        "preferred_start_date": "27-May-2026",
+        "start_location": "Wollongong",
+        "end_location": "Sydney",
+        "quote_cost": "$450.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$450.00"
+      },
+      {
+        "quote_no": 17,
+        "quote_prepared_on": "01-Jun-2026",
+        "preferred_start_date": "06-Jun-2026",
+        "start_location": "Canberra",
+        "end_location": "Sydney",
+        "quote_cost": "$800.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$800.00"
+      },
+      {
+        "quote_no": 22,
+        "quote_prepared_on": "08-Jun-2026",
+        "preferred_start_date": "15-Jun-2026",
+        "start_location": "Townsville",
+        "end_location": "Cairns",
+        "quote_cost": "$900.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 27,
+        "quote_prepared_on": "20-Jun-2026",
+        "preferred_start_date": "26-Jun-2026",
+        "start_location": "Geelong",
+        "end_location": "Melbourne",
+        "quote_cost": "$400.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 32,
+        "quote_prepared_on": "05-Jul-2026",
+        "preferred_start_date": "15-Jul-2026",
+        "start_location": "Wagga Wagga",
+        "end_location": "Melbourne",
+        "quote_cost": "$900.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      }
+    ]
+  },
+  {
+    "_id": 4,
+    "customer_name": "Demo Four",
+    "customer_business": "-",
+    "customer_address": "4 Example Avenue, Melbourne, 3001",
+    "customer_phone": "0000000104",
+    "customer_stats": {
+      "number_of_quotes": 5,
+      "number_of_jobs": 3,
+      "total_paid_jobcost": "$1,150.00",
+      "total_unpaid_jobcost": "$800.00"
+    },
+    "quotes": [
+      {
+        "quote_no": 8,
+        "quote_prepared_on": "12-May-2026",
+        "preferred_start_date": "18-May-2026",
+        "start_location": "Melbourne",
+        "end_location": "Geelong",
+        "quote_cost": "$400.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$450.00"
+      },
+      {
+        "quote_no": 13,
+        "quote_prepared_on": "24-May-2026",
+        "preferred_start_date": "29-May-2026",
+        "start_location": "Hobart",
+        "end_location": "Launceston",
+        "quote_cost": "$700.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$700.00"
+      },
+      {
+        "quote_no": 18,
+        "quote_prepared_on": "02-Jun-2026",
+        "preferred_start_date": "08-Jun-2026",
+        "start_location": "Sydney",
+        "end_location": "Canberra",
+        "quote_cost": "$800.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$800.00"
+      },
+      {
+        "quote_no": 23,
+        "quote_prepared_on": "10-Jun-2026",
+        "preferred_start_date": "17-Jun-2026",
+        "start_location": "Cairns",
+        "end_location": "Townsville",
+        "quote_cost": "$900.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 28,
+        "quote_prepared_on": "22-Jun-2026",
+        "preferred_start_date": "28-Jun-2026",
+        "start_location": "Bunbury",
+        "end_location": "Perth",
+        "quote_cost": "$600.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      }
+    ]
+  },
+  {
+    "_id": 5,
+    "customer_name": "Demo Five",
+    "customer_business": "-",
+    "customer_address": "5 Example Avenue, Brisbane, 4000",
+    "customer_phone": "0000000105",
+    "customer_stats": {
+      "number_of_quotes": 5,
+      "number_of_jobs": 3,
+      "total_paid_jobcost": "$1,250.00",
+      "total_unpaid_jobcost": "$550.00"
+    },
+    "quotes": [
+      {
+        "quote_no": 9,
+        "quote_prepared_on": "15-May-2026",
+        "preferred_start_date": "20-May-2026",
+        "start_location": "Brisbane",
+        "end_location": "Gold Coast",
+        "quote_cost": "$500.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$600.00"
+      },
+      {
+        "quote_no": 14,
+        "quote_prepared_on": "26-May-2026",
+        "preferred_start_date": "01-Jun-2026",
+        "start_location": "Ballarat",
+        "end_location": "Melbourne",
+        "quote_cost": "$550.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$550.00"
+      },
+      {
+        "quote_no": 19,
+        "quote_prepared_on": "04-Jun-2026",
+        "preferred_start_date": "10-Jun-2026",
+        "start_location": "Toowoomba",
+        "end_location": "Brisbane",
+        "quote_cost": "$650.00",
+        "assigned_to_job": "Y",
+        "job_cost": "$650.00"
+      },
+      {
+        "quote_no": 24,
+        "quote_prepared_on": "12-Jun-2026",
+        "preferred_start_date": "19-Jun-2026",
+        "start_location": "Bendigo",
+        "end_location": "Melbourne",
+        "quote_cost": "$500.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      },
+      {
+        "quote_no": 29,
+        "quote_prepared_on": "25-Jun-2026",
+        "preferred_start_date": "01-Jul-2026",
+        "start_location": "Perth",
+        "end_location": "Bunbury",
+        "quote_cost": "$600.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      }
+    ]
+  },
+  {
+    "_id": 18,
+    "customer_name": "Victoria Ella",
+    "customer_business": "Flintstone Store",
+    "customer_address": "18 Example Avenue, Adelaide, 5000",
+    "customer_phone": "0000000118",
+    "customer_stats": {
+      "number_of_quotes": 1,
+      "number_of_jobs": 0,
+      "total_paid_jobcost": "-",
+      "total_unpaid_jobcost": "-"
+    },
+    "quotes": [
+      {
+        "quote_no": 300,
+        "quote_prepared_on": "17-May-2026",
+        "preferred_start_date": "25-May-2026",
+        "start_location": "29 Kuranda Road, Adelaide SA 5030",
+        "end_location": "9 Albatros Drive, Mount Gambier SA 5270",
+        "quote_cost": "$1,000.00",
+        "assigned_to_job": "N",
+        "job_cost": "-"
+      }
+    ]
+  }
+]

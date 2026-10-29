@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7AF172D-9CBC-C8EA-BB1A-6F7A9384F983" name="CONTRACT_WASTE_COLLECTION">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>F1F6DF7B-9FFE-B667-EA95-C0AEDE0CFA8E</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="contract_no" id="A8E22596-AF30-EE8F-BD08-AB3477ED69CC">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number ]]></commentInRDBMS>
+<generatorID>D012187C-2DBA-EC54-7F6E-7D94FA15D4BC</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76E64946-C262-B6F2-7B3A-D91E6FF75195" referredColumn="88490501-5243-27A1-061C-D7E13D6010D1"/>
+</associations>
+</Column>
+<Column name="waste_type_id" id="6C0F7504-DA53-4646-F672-6B4E8A5F5AA4">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>51EFCE55-B8B4-38E1-BFE5-BCF3E31AE01D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6877A560-567A-F11D-7C18-3874CF392005" referredColumn="11D01967-ADE6-56F4-73B5-E587377174CD"/>
+</associations>
+</Column>
+<Column name="collection_cost_per_kg" id="489A1E3B-D2FF-25CF-113B-04DDC34195AE">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection cost per kilogram for the waste types to be collected under this contract]]></commentInRDBMS>
+<generatorID>DF883E8E-2AD8-4044-8C9B-248161F86041</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="collection_frequency" id="629FC810-CE23-1180-2405-21D997D47ED7">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection frequency ]]></commentInRDBMS>
+<generatorID>98EEAE93-6519-E58D-51CE-631801F62E20</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A96E6DF3-B518-0A10-ED4D-9875DE2214DF" name="CONTRACT_WASTE_COLLECTION_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>EDC75929-9359-D391-4DA9-2879377483B3</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C0F7504-DA53-4646-F672-6B4E8A5F5AA4"/>
+<colUsage columnID="A8E22596-AF30-EE8F-BD08-AB3477ED69CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE101F43-9EE9-A51D-C44C-50496292278F" name="contract_cwc_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>B6D6A1EF-718F-3230-B6C3-2DA991A096B0</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8E22596-AF30-EE8F-BD08-AB3477ED69CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EE63ADD-9EB5-6764-6530-CAFC08FE3212" name="wastetype_cwc_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>63A1BE7D-0725-4524-3B78-B0DF2FDFC9CA</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C0F7504-DA53-4646-F672-6B4E8A5F5AA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="490D1227-2483-1247-D2C1-FCEE94880479" name="STREET">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:09:19 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="street_id" id="D80523B9-6918-C8D7-4554-887BF8B307F2">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:12:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street ID]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="authority_name" id="28BC29B1-0848-2E2E-886B-47F879D213A6">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:23:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Authority name ]]></commentInRDBMS>
+<generatorID>516F6219-3A4C-89DC-131E-95ACA9A77BA8</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>2C6DAAE7-518F-D370-DE53-16D558087479</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="street_name" id="F240F548-2ACE-A535-C72C-1C0792F85968">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:12:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street name ]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="length_metres" id="4127E6C3-C8DA-9675-BE48-D71A72538795">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:12:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street length in metres]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="road_surface_type" id="A2594F8D-DC69-F600-AA40-BC5A2F3A3D78">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:12:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Type of road surface
+- A as Asphalt
+- C as Concrete
+- U as Unsealed]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<constraintName>chk_roadsurfacetype</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Asphalt"/>
+<valueDef value="C" description="Concrete"/>
+<valueDef value="U" description="Unsealed"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lanes_no" id="852306ED-3B79-B603-C685-B32740C6024D">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:18:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[number of lanes]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A04F3B8D-3591-68C2-469A-F4D334A64A9C" name="STREET PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:17:39 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D80523B9-6918-C8D7-4554-887BF8B307F2</attributeRef>
+<attributeRef>28BC29B1-0848-2E2E-886B-47F879D213A6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

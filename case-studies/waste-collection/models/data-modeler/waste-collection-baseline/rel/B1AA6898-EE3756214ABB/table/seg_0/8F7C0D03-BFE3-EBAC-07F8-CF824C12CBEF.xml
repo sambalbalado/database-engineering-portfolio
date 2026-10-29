@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F7C0D03-BFE3-EBAC-07F8-CF824C12CBEF" name="COLLECTION_RUN">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>B516B434-8F01-259F-5904-A93E8BD6A8BB</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="collection_run_id" id="3E7AAF94-F67C-3011-6EF5-55D849F5D71E">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection run entity ID]]></commentInRDBMS>
+<generatorID>E6469FDA-EBBD-9034-926E-1768812ECFF5</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_of_collection" id="99FC20A1-42FD-A06A-9A4B-34AAEC014B67">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of collection]]></commentInRDBMS>
+<generatorID>E37D3511-7ABB-9DCC-F11D-EF98D6886D8C</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_type_id" id="0BF6CEA7-1100-69FE-6E97-14191EE68FB9">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>13CCAC53-1B13-28BF-0F37-55AB692C6125</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62D3AEF2-3B24-3D31-BF47-48F6B6CC3A52" referredColumn="6C0F7504-DA53-4646-F672-6B4E8A5F5AA4"/>
+</associations>
+</Column>
+<Column name="contract_no" id="C0308E40-6E54-1A5F-7E49-89C55DB9BEC9">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number ]]></commentInRDBMS>
+<generatorID>E37BC4B9-4EC8-4348-9831-06B45D9BBFEB</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62D3AEF2-3B24-3D31-BF47-48F6B6CC3A52" referredColumn="A8E22596-AF30-EE8F-BD08-AB3477ED69CC"/>
+</associations>
+</Column>
+<Column name="collection_truck_vin" id="152F3798-5A01-1432-E84B-4C27B48757E3">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection trucks Vehicle Identification Number]]></commentInRDBMS>
+<generatorID>F27FD4CB-254C-ECA5-7C5E-8A72FFE67D5B</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9187113A-54FA-EE1C-7393-C76A86BD3EFE" referredColumn="B2AF501A-3C3D-30CA-F08C-66BB9E281008"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="324AD00F-230C-5BAA-DC0C-6585BF980BF7" name="COLLECTION_RUN_PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>66C544B5-6C2C-101B-A663-49456C8DA6D4</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E7AAF94-F67C-3011-6EF5-55D849F5D71E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="367D07C2-B475-54EB-D871-AD4C539181B4" name="COLLECTION_RUN_UK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>346CDDE0-80C0-545D-E653-EFD25BB9E05E</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0308E40-6E54-1A5F-7E49-89C55DB9BEC9"/>
+<colUsage columnID="0BF6CEA7-1100-69FE-6E97-14191EE68FB9"/>
+<colUsage columnID="99FC20A1-42FD-A06A-9A4B-34AAEC014B67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD1416CD-A6A0-3822-20AB-2928D344039A" name="collectionrun_truck_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>4DEDB71D-5C97-3ABB-FD2E-1B4EF96E7003</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="152F3798-5A01-1432-E84B-4C27B48757E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="549F5684-41AE-15CA-F2FD-7B5670C6513F" name="cwc_cr_fk">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-05-01 05:56:44 UTC</createdTime>
+<generatorID>C7780786-D675-91D7-329C-325C4990AD83</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BF6CEA7-1100-69FE-6E97-14191EE68FB9"/>
+<colUsage columnID="C0308E40-6E54-1A5F-7E49-89C55DB9BEC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

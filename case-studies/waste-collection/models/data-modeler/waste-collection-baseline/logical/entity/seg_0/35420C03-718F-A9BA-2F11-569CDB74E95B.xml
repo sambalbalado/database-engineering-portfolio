@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="35420C03-718F-A9BA-2F11-569CDB74E95B" name="LOCAL_AUTHORITY">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:44:39 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="authority_name" id="2C6DAAE7-518F-D370-DE53-16D558087479">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Authority name ]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ceo_given_name" id="EC98BEF5-3C21-0BA6-5F08-EE90653A1729">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[CEO given name]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ceo_family_name" id="CB5FBFA8-8DC7-B168-06DE-DEE2C5769639">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[CEO Family name]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contact_no" id="1D2F252D-C95F-EFF9-F3B2-9E709123865C">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[contact telephone number]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total_area_sq_km" id="D1869348-98B6-C3C6-D782-00D583EE98C4">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total area in square kilometres]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="authority_type" id="5ECB6F28-5730-0142-D93B-32ECEC87271F">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Local Authorities are classified into the following fixed types:
+- B as Borough
+- C as City
+- D as District Council
+- S as Shire
+- T as Town]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<constraintName>chk_authoritytype</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Borough"/>
+<valueDef value="C" description="City"/>
+<valueDef value="D" description="Distrct Council"/>
+<valueDef value="S" description="Shire"/>
+<valueDef value="T" description="Town"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5854DA4-B4BF-DAFE-97AB-557BB4573985" name="LOCAL_AUTHORITY PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 05:48:25 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2C6DAAE7-518F-D370-DE53-16D558087479</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

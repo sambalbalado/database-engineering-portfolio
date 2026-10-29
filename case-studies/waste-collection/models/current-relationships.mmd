@@ -1,0 +1,17 @@
+erDiagram
+ LOCAL_AUTHORITY ||--o{ STREET : administers
+ LOCAL_AUTHORITY ||--o{ CONTRACT : signs
+ STREET ||--o{ PROPERTY : contains
+ PROPERTY ||--o{ PROPERTY_OWNER : has_links
+ OWNER ||--o{ PROPERTY_OWNER : has_links
+ PROPERTY ||--o{ BIN : receives
+ WASTE_TYPE ||--o{ BIN_TYPE : classifies
+ WASTE_TYPE ||--o{ CONTRACT_WASTE_COLLECTION : priced_by
+ CONTRACT ||--o{ CONTRACT_WASTE_COLLECTION : covers
+ CONTRACT_WASTE_COLLECTION ||--o{ CONTRACT_BIN_SUPPLY : allows
+ BIN_TYPE ||--o{ CONTRACT_BIN_SUPPLY : describes
+ CONTRACT_BIN_SUPPLY ||--o{ BIN : supplied_under
+ CONTRACT_WASTE_COLLECTION ||--o{ COLLECTION_RUN : schedules
+ TRUCK ||--o{ COLLECTION_RUN : serves
+ COLLECTION_RUN ||--o{ BIN_COLLECTION : records
+ BIN ||--o{ BIN_COLLECTION : observed_in

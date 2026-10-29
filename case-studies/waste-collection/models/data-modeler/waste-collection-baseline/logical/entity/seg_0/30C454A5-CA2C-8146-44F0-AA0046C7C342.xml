@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="30C454A5-CA2C-8146-44F0-AA0046C7C342" name="BIN">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:55:02 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="bin_rfid" id="E21C0A4D-7C4C-18D0-5539-8D9E2B9675BD">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:52:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[RFID tag of a bin ]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>24 CHAR</dataTypeSize>
+<ownDataTypeParameters>24 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="supply_date" id="2C060861-32EE-2DF8-42A3-36A0A73F2A16">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:52:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of supply]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="replacement_reason" id="CE9F686B-2847-AB08-E4A3-E363F83D75A4">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:53:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Reason of replacement
+- Damage by owner
+- Bin Failure
+- Damaged during pickup of waste
+- Stolen]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<constraintName>chk_replacementreason</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<listOfValues>
+<valueDef value="Bin Failure" description=""/>
+<valueDef value="Damaged by Owner" description=""/>
+<valueDef value="Damaged during pickup of waste" description=""/>
+<valueDef value="Stolen" description=""/>
+</listOfValues>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste_type_id" id="58C8E9B8-CFEB-B52E-F6E1-6CF962C8BED8">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:18:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>9C4B1F5B-9DBE-B3C1-E3B5-F757A282346D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>43F111B7-F4D0-9679-7A5D-950BCB9A050B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bin_size" id="6A83EA4A-5E2E-DD9C-89A1-79ADC2E93F0D">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:18:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Bin size]]></commentInRDBMS>
+<generatorID>9C4B1F5B-9DBE-B3C1-E3B5-F757A282346D</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>A25609CC-1AF4-E153-D6E8-80F5872D068E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="property_id" id="FE421740-561D-75C1-B02F-1A6FDD1FEB1C">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 08:30:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Property ID]]></commentInRDBMS>
+<generatorID>12BFCD92-C8EC-325E-2E13-3D9E497F9A62</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>03BAB3AE-4886-66DD-86BB-E30D4A7472ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contract_bin_supply_id" id="6F08A943-0555-5E73-A37D-9F2585F076E6">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 11:24:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract bin supply ID]]></commentInRDBMS>
+<generatorID>BECA1570-E9C5-0EC6-8C1F-85FBFE5D4938</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>C769A7D1-74AB-4A7A-0574-1A9679919DC6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A0C74BDF-439E-53E0-0AE4-0EF603A2E2EB" name="BIN PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:52:15 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E21C0A4D-7C4C-18D0-5539-8D9E2B9675BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

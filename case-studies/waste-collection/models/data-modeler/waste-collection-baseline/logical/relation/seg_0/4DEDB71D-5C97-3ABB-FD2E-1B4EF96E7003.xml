@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="collectionrun_truck_fk" directorySegmentName="seg_0" id="4DEDB71D-5C97-3ABB-FD2E-1B4EF96E7003">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 06:50:58 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<sourcePk>00C2F9CC-878E-DA06-E4A2-C2ED7FEE9948</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>assigned_to</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>008569C6-8AE0-B9F8-3AA5-1D7079A66A6A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B516B434-8F01-259F-5904-A93E8BD6A8BB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

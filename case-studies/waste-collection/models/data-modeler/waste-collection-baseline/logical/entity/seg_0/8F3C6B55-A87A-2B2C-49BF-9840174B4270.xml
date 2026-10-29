@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F3C6B55-A87A-2B2C-49BF-9840174B4270" name="BIN_TYPE">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:56:17 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="waste_type_id" id="43F111B7-F4D0-9679-7A5D-950BCB9A050B">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:43:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>72F667F1-4078-9037-C4E2-74185FB51633</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>364605E6-F764-2991-DD85-F22EE548313A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bin_size" id="A25609CC-1AF4-E153-D6E8-80F5872D068E">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:45:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[Bin size]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bin_supply_cost" id="55E19FA6-A249-092C-A0A6-4AC9E5EFEDBF">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:49:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[Standard bin supply cost]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="63E70B2B-0F22-82A3-8C2D-9D9016B1F170" name="BIN_TYPE PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:43:17 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>43F111B7-F4D0-9679-7A5D-950BCB9A050B</attributeRef>
+<attributeRef>A25609CC-1AF4-E153-D6E8-80F5872D068E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

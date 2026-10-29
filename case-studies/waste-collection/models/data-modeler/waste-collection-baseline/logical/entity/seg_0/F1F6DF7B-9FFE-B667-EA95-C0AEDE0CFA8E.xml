@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F1F6DF7B-9FFE-B667-EA95-C0AEDE0CFA8E" name="CONTRACT_WASTE_COLLECTION">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 06:55:51 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="contract_no" id="D012187C-2DBA-EC54-7F6E-7D94FA15D4BC">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:22:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number ]]></commentInRDBMS>
+<generatorID>B6D6A1EF-718F-3230-B6C3-2DA991A096B0</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>4CB0239B-4018-8564-7FE8-F861ABDA93AF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste_type_id" id="51EFCE55-B8B4-38E1-BFE5-BCF3E31AE01D">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:43:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[Waste type ID]]></commentInRDBMS>
+<generatorID>63A1BE7D-0725-4524-3B78-B0DF2FDFC9CA</generatorID>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<referedAttribute>364605E6-F764-2991-DD85-F22EE548313A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="collection_cost_per_kg" id="DF883E8E-2AD8-4044-8C9B-248161F86041">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:47:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection cost per kilogram for the waste types to be collected under this contract]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="collection_frequency" id="98EEAE93-6519-E58D-51CE-631801F62E20">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-30 04:50:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection frequency ]]></commentInRDBMS>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EDC75929-9359-D391-4DA9-2879377483B3" name="CONTRACT_WASTE_COLLECTION PK">
+<createdBy>Esaam Matudin</createdBy>
+<createdTime>2026-04-24 07:23:14 UTC</createdTime>
+<ownerDesignName>waste-collection-baseline</ownerDesignName>
+<engineerTo>
+<item key="B1AA6898-E585-AE23-8B69-EE3756214ABB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>51EFCE55-B8B4-38E1-BFE5-BCF3E31AE01D</attributeRef>
+<attributeRef>D012187C-2DBA-EC54-7F6E-7D94FA15D4BC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
