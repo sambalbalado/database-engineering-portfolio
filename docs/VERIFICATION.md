@@ -10,12 +10,12 @@ Prepared on **29 October 2026**. The checks below distinguish executed local che
 | Report expectations | Independently counted used/unused pairs and compared quoted/effective costs. | 10 used pairs, 3 unused, average 2 jobs per used pair; 2 high-use pairs. These are fixture calculations, not SQL query results. |
 | Customer documents | Parsed checked-in JSON and independently reconstructed documents from SQL fixtures plus the retained lifecycle quote. | 6 customers, 33 quotes, 20 assigned jobs; counts and paid/unpaid effective totals agree. Original embedded customer identities were replaced by fresh synthetic reference data. |
 | Waste fixture | Compared baseline model/SQL and checked identifiers, waste coverage, supply authority/dates and collection semantics in the literal fixture. | Historical supply price 55 retained; expected successful charge 11.16; overweight attempt has no collected weight. These are static calculations. |
-| Script and documentation paths | Portable checker resolves local Markdown/image links and all `@@` SQL includes. | All checked targets resolve. GitHub's actual rendered pages are pending publication. |
+| Script and documentation paths | Portable checker resolves local Markdown/image links and all `@@` SQL includes. | All checked targets resolve. Root README, waste case-study preview and both Mermaid relationship diagrams were inspected on GitHub after publication. |
 | JavaScript | `node --check` on both mongosh files. | Syntax passes. This does not execute or simulate MongoDB. |
 | JSON conversion | Exercised NDJSON-to-array conversion and rejection of malformed input. | Valid customer objects round-trip; invalid input fails. It is not an Oracle export test. |
 | SQL parser review | Parsed the plain DDL/DML/report/JSON statements with sqlglot's Oracle dialect. | Supplemental syntax review only. Oracle-specific PL/SQL and client commands require Oracle; the parser treats one column-drop form as an unsupported command. |
-| Public-content review | Reviewed text, staged paths and source diffs; scanned binary PDFs after decompression, metadata and attachments, model metadata and hidden files. | Private IDs, institutional access details and restricted documents are excluded. Generic credential-pattern scans are not a guarantee against all possible secrets. |
-| Diagram cleanup | Redacted the two baseline PDFs, removed attachments/XML metadata, rewrote document properties, rendered PNG previews and visually inspected the cleaned diagrams. | Relationships, keys and technical legends retained. New current-relationship sources receive static review; native Mermaid rendering on GitHub is pending. |
+| Public-content review | Reviewed text, staged paths and source diffs; scanned binary PDFs after decompression, metadata and attachments, model metadata and hidden files. | Private IDs, institutional access details and restricted documents are excluded. Anonymous GitHub tree inspection confirmed all 142 uploaded file paths and blob hashes match the reviewed local repository. Generic credential-pattern scans are not a guarantee against all possible secrets. |
+| Diagram cleanup | Redacted the two baseline PDFs, removed attachments/XML metadata, rewrote document properties, rendered PNG previews and visually inspected the cleaned diagrams. | Relationships, keys and technical legends retained. Both current-relationship Mermaid diagrams were rendered and visually inspected on GitHub. |
 
 ## Not executed
 
@@ -23,7 +23,6 @@ Prepared on **29 October 2026**. The checks below distinguish executed local che
 - Oracle reporting output, SQL/JSON execution and SQL*Plus/SQLcl spool behaviour.
 - MongoDB insertion, filter/projection results, atomic update behaviour and runtime assertions.
 - Native Oracle Data Modeler reopening of the renamed/sanitized project.
-- GitHub upload, public visibility and rendered README/image checks until publication is authorized and performed.
 
 Oracle clients, mongosh and a MongoDB server were unavailable. Docker was installed but its daemon was not running. No alternative relational engine was used to claim Oracle compatibility.
 
@@ -38,3 +37,9 @@ node --check case-studies/transport-logistics/mongodb/assertions.mongodb.js
 The [setup guide](SETUP.md) gives the exact Oracle and MongoDB paths. Each Oracle setup runner invokes a fail-fast assertion script after preparing its fixture. Transport also verifies the lifecycle's intermediate quote/job states before cancellation. The [MongoDB assertions](../case-studies/transport-logistics/mongodb/assertions.mongodb.js) run after its demonstration.
 
 The [historical waste transcript](../case-studies/waste-collection/verification/historical-schema-output.txt) reports the original baseline schema run and contains no `ORA-` diagnostics. It is supplied historical evidence, not a run of the corrected portfolio schema. The generator's summary is not treated as proof of business-rule correctness.
+
+## Publication checks
+
+Published to [sambalbalado/database-engineering-portfolio](https://github.com/sambalbalado/database-engineering-portfolio) after the author confirmed permission for all included material and public GitHub distribution. The authenticated personal account is the owner; visibility is **public** and the default branch is **main**.
+
+An unauthenticated GitHub API request confirmed public access. The recursive remote tree matched all 142 reviewed local file paths and Git blob hashes, including binary documents and editable model companions; excluded originals and private review notes are absent. Anonymous raw requests matched the root README and both diagram PNGs byte for byte. The rendered root README, case-study image and both Mermaid diagrams were also inspected in the browser. Repository description and six relevant topics were set.
